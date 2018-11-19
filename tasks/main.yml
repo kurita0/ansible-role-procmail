@@ -1,0 +1,14 @@
+---
+- name: Install procmail
+  pkgng: name={{ item }} state=present
+  with_items:
+    - procmail
+
+- name: Copy procmailrc
+  copy: src=procmailrc dest=/usr/local/etc/procmailrc mode=0644 backup=yes
+
+- name: Copy local_procmail_lmtp.m4
+  copy: src=/usr/local/share/examples/procmail/local_procmail_lmtp.m4 dest=/usr/share/sendmail/cf/feature/local_procmail_lmtp.m4 mode=0644 remote_src=true
+
+- name: Copy procmail
+  copy: src=procmail dest=/etc/newsyslog.conf.d/procmail mode=0644

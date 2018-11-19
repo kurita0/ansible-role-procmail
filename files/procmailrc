@@ -1,0 +1,3 @@
+DEFAULT=$HOME/Maildir/
+LOGFILE=/var/log/procmail.log
+VERBOSE=off
