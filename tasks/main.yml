@@ -11,4 +11,4 @@
   copy: src=/usr/local/share/examples/procmail/local_procmail_lmtp.m4 dest=/usr/share/sendmail/cf/feature/local_procmail_lmtp.m4 mode=0644 remote_src=true
 
 - name: Copy procmail
-  copy: src=procmail dest=/etc/newsyslog.conf.d/procmail mode=0644
+  copy: src=procmail dest=/usr/local/etc/newsyslog.conf.d/procmail mode=0644
